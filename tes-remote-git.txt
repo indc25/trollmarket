@@ -1,2 +1,0 @@
-tes remote git
-tutorial git remote
