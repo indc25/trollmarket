@@ -41,4 +41,9 @@ public class User {
     @OneToMany(mappedBy = "buyerID")
     private Set<Cart> carts = new LinkedHashSet<>();
 
+    public User(Role roleID, String username, String password) {
+        this.roleID = roleID;
+        this.username = username;
+        this.password = password;
+    }
 }
