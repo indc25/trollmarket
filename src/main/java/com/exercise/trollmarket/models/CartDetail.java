@@ -32,7 +32,4 @@ public class CartDetail {
     @Column(name = "Quantity", nullable = false)
     private Integer quantity;
 
-    @Column(name = "TotalPrice", nullable = false, precision = 19, scale = 4)
-    private BigDecimal totalPrice;
-
 }
