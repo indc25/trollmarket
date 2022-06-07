@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{/css/site.css}"/>
+<link rel="stylesheet" th:href="@{/css/normalize.css}"/>
+<link rel="stylesheet" th:href="@{/css/w3.css}"/>
+<link rel="stylesheet" href="/src/main/resources/static/css/w3.css">
+<link rel="stylesheet" href="/src/main/resources/static/css/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script th:src="@{/resources/js/jquery-3.6.0.js}"></script>
+<script src="/TrollProject/src/main/resources/static/js/site.js"></script>
+
+</head>
+<body class="main-body" >
+  
+  <nav th:fragment="navigation">
+   
+    <!-- header for welcome sign -->
+    
+        <p class="w3-right">Welcome, Irfan Rahmanindra <a class=" w3-button" href="#home"><i class="fa fa-sign-out"></i>
+            Sign Out</a></p>
+        <h1>Troll Market</h1>
+
+ 
+        <div class="w3-center w3-white w3-card w3-small" id="myNavbar">
+            <!-- Right-sided navbar links -->
+            <div class="w3-center w3-hide-small">
+                <a th:href="@{/profile/home}" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+                <a class="w3-bar-item w3-button" href="#profile"><i class="fa fa-user"></i> PROFILE</a>
+                <a class="w3-bar-item w3-button" href="#team"><i class="fa fa-usd"></i> SHOP</a>
+                <a class="w3-bar-item w3-button" href="#work"><i class="fa fa-gift "></i> MERCHANDISE</a>
+                <a class="w3-bar-item w3-button" href="#pricing"><i class="fa fa-ship"></i> SHIPMENT</a>
+                <a class="w3-bar-item w3-button" href="#contact"><i class="fa fa-shopping-cart"></i> MY CART</a>
+                <a class="w3-bar-item w3-button" href="#contact"><i class="fa fa-user-circle-o "></i> ADMIN</a>
+                <a class="w3-bar-item w3-button" href="#contact"><i class="fa fa-history"></i> HISTORY</a>
+            </div>
+        </div>
+</nav>
+<h1 class="bread-crumbs w3-large">Merchandise</h1>
+<!-- Breadcrumbs -->
+
+<table class="table content">
+  
+  <tbody>
+  <tr class="table-header trcenter">
+      <th colspan="1">Action</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Service</th>
+  </tr>
+  <tr class="table-row trcenter">
+      <td><button class="w3-button w3-black addBtn"> Add New Shipment</button></td>
+  </tr>
+  <tr th:each="candidate : ${candidates}" class="table-row trcenter">
+    <td> 
+      <button class="w3-button w3-black  "> Edit</button>
+      <button class="w3-button w3-black " > Delete</button>
+      <button class="w3-button w3-black  "> Stop Service</button>
+    
+      </td>
+      <td th:text="${candidate.firstName}">China Ocean Shipping Company</td>
+      <td th:text="${candidate.gender}">Rp. 5.000</td>
+      <td th:text="${candidate.gender}">No</td>
+  </tr>
+  <tr th:each="candidate : ${candidates}" class="table-row trcenter">
+    <td> 
+      <button class="w3-button w3-black  "> Edit</button>
+      <button class="w3-button w3-black " > Delete</button>
+      <button class="w3-button w3-black  "> Stop Service</button>
+    
+      </td>
+      <td th:text="${candidate.firstName}">DHL</td>
+      <td th:text="${candidate.gender}">Rp. 3.000</td>
+      <td th:text="${candidate.gender}">No</td>
+  </tr>
+  <tr th:each="candidate : ${candidates}" class="table-row trcenter">
+    <td> 
+      <button class="w3-button w3-black  "> Edit</button>
+      <button class="w3-button w3-black " > Delete</button>
+      <button class="w3-button w3-black  "> Stop Service</button>
+    
+      </td>
+      <td th:text="${candidate.firstName}">A.P. Moller-Maersk</td>
+      <td th:text="${candidate.gender}">Rp. 9.000</td>
+      <td th:text="${candidate.gender}">No</td>
+  </tr>
+  <tr th:each="candidate : ${candidates}" class="table-row trcenter">
+    <td> 
+      <button class="w3-button w3-black  "> Edit</button>
+      <button class="w3-button w3-black " > Delete</button>
+      <button class="w3-button w3-black "> Stop Service</button>
+    
+      </td>
+      <td th:text="${candidate.firstName}">Mediterranean Shipping Companyy</td>
+      <td th:text="${candidate.gender}">Rp. 7.000</td>
+      <td th:text="${candidate.gender}">No</td>
+  </tr>
+
+  </tbody>
+</table>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-70">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Back to Top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+   <!-- Modal content -->
+  <div id="modalAdd" class="w3-modal">
+    <div class="modal-content2">
+        <table class="trleft">
+            <tbody>
+            <tr class="trleft">
+                <td>Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr class="trleft">
+              <td>Category</td>
+              <td><input type="text"></td>
+          </tr>
+        <tr class="trleft">
+            <td>Service</td>
+            <td> <input type="checkbox"></td>
+          </tr>
+        
+          
+            </tbody>
+          </table>
+      <div><br>
+        
+      <button class="w3-button w3-black close" >Close</button>
+      </div>
+    </div>
+  </div>
+<script>
+
+  var modal = document.getElementById("modalAdd");
+  
+  // Get the button that opens the modal
+
+  //multiple button 1 class implementation
+  btns = document.getElementsByClassName("addBtn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+			//Add function here
+      modal.style.display = "block";
+        });
+    }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  //span detail
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  //close detail
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+</body>
+
+</html>
