@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{/css/site.css}"/>
+<link rel="stylesheet" th:href="@{/css/normalize.css}"/>
+<link rel="stylesheet" th:href="@{/css/w3.css}"/>
+<link rel="stylesheet" href="/src/main/resources/static/css/w3.css">
+<link rel="stylesheet" href="/src/main/resources/static/css/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script th:src="@{/resources/js/jquery-3.6.0.js}"></script>
+<script src="/src/main/resources/static/js/site.js"></script>
+
+</head>
+<body class="main-body" >
+  
+  <nav th:fragment="navigation">
+   
+    <!-- header for welcome sign -->
+    
+        <p class="w3-right">Welcome, Irfan Rahmanindra <a class=" w3-button" href="#home"><i class="fa fa-sign-out"></i>
+            Sign Out</a></p>
+        <h1>Troll Market</h1>
+
+ 
+        <div class="w3-center w3-white w3-card w3-small" id="myNavbar">
+            <!-- Right-sided navbar links -->
+            <div class="w3-center w3-hide-small">
+                <a th:href="@{/profile/home}" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+                <a class="w3-bar-item w3-button" href="#profile"><i class="fa fa-user"></i> PROFILE</a>
+                <a class="w3-bar-item w3-button" href="#team"><i class="fa fa-usd"></i> SHOP</a>
+                <a class="w3-bar-item w3-button" href="#work"><i class="fa fa-gift "></i> MERCHANDISE</a>
+                <a class="w3-bar-item w3-button" href="#pricing"><i class="fa fa-ship"></i> SHIPMENT</a>
+                <a class="w3-bar-item w3-button" href="#contact"><i class="fa fa-shopping-cart"></i> MY CART</a>
+                <a class="w3-bar-item w3-button" href="#contact"><i class="fa fa-user-circle-o "></i> ADMIN</a>
+                <a class="w3-bar-item w3-button" href="#contact"><i class="fa fa-history"></i> HISTORY</a>
+            </div>
+        </div>
+</nav>
+<h1 class="bread-crumbs w3-large">Merchandise > Add Product</h1>
+<!-- Breadcrumbs -->
+
+<table class="table content">
+  
+  <tbody>
+  <tr class="table-row">
+     <td>Name</td>
+     <td> <input type="text" name="" id=""></td> 
+  </tr>
+  <tr class="table-row">
+    <td>Category</td>
+    <td>  <input type="text" name="" id=""></td> 
+ </tr>
+ <tr class="table-row">
+  <td>Description</td>
+  <td><textarea name="" id="" cols="30" rows="10"></textarea></td> 
+ </tr>
+<tr class="table-row">
+  <td>Price</td>
+  <td>  <input type="text" name="" id=""></td>  
+</tr>
+<tr class="table-row">
+  <td>Discontinue</td>
+  <td> <input type="checkBox" name="" id=""></td>  
+</tr>
+<tr>
+  <td>
+    <button class="w3-button w3-black cartBtn "> Save</button>
+    <button class="w3-button w3-black detailBtn" > Cancel</button>
+  </td>
+</tr>
+
+  
+
+  </tbody>
+</table>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-70">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Back to Top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+<div id="myModal" class="w3-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content2">
+    
+      <p>Quantity : </p>
+      <input type="text" id="fname" name="fname">
+      <p>Shipment:</p>
+  <select>
+    <option value="volvo">China Ocean Shipping Company </option>
+    <option value="saab">DHL</option>
+    <option value="opel">A.P. Moller-Maersk </option>
+    <option value="audi">Mediterranean Shipping Company</option>
+  </select>
+      <div><br>
+        <button class="w3-button w3-black" > Add to Cart</button>
+      <button class="w3-button w3-black close" >Cancel</button>
+      </div>
+      
+    </div>
+  
+  </div>
+   <!-- Modal content -->
+  <div id="modalDetail" class="w3-modal">
+    <div class="modal-content2">
+        <table class="trleft">
+            <tbody>
+            <tr class="trleft">
+                <td>Name</td>
+                <td>: Irfan Rahmanindra</td>
+            </tr>
+            <tr class="trleft">
+              <td>Category</td>
+              <td>: Car</td>
+          </tr>
+          <tr class="trleft">
+            <td>Description</td>
+            <td>: Exotic Car</td>
+        </tr>
+        <tr class="trleft">
+          <td>Price</td>
+          <td>: Rp.2.000.000.000</td>
+        </tr>
+        <tr class="trleft">
+            <td>Seller Name :</td>
+            <td> Andrew Tate</td>
+          </tr>
+        
+          
+            </tbody>
+          </table>
+      <div><br>
+        
+      <button class="w3-button w3-black close1" >Close</button>
+      </div>
+    </div>
+  </div>
+<script>
+  </script>
+
+</body>
+
+</html>
