@@ -1,4 +1,4 @@
-package com.exercise.trollmarket.dtos;
+package com.exercise.trollmarket.exception;
 
 import lombok.Data;
 
