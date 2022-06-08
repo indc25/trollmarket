@@ -3,7 +3,6 @@ package com.exercise.trollmarket.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Builder
 @AllArgsConstructor
@@ -16,10 +15,9 @@ public class Profile {
     @Column(name = "UserID", nullable = false)
     private Integer id;
 
-    @MapsId
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "UserID", nullable = false)
-    private User user;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "BalanceID", nullable = false)
+    private Balance balanceID;
 
     @Column(name = "FirstName", nullable = false, length = 50)
     private String firstName;
@@ -30,8 +28,5 @@ public class Profile {
     @Lob
     @Column(name = "Address", nullable = false)
     private String address;
-
-    @Column(name = "Balance", nullable = false, precision = 19, scale = 4)
-    private BigDecimal balance;
 
 }

@@ -32,4 +32,10 @@ public class CartDetail {
     @Column(name = "Quantity", nullable = false)
     private Integer quantity;
 
+//    public CartDetail(Integer cartID, Integer productID, Integer shipmentID, Integer quantity) {
+//        this.cartID = new Cart(cartID);
+//        this.productID = new Product(productID);
+//        this.shipmentID = new Shipment(shipmentID);
+//        this.quantity = quantity;
+//    }
 }
